@@ -1,0 +1,56 @@
+:root {
+    --book-cover-width:200px;
+    --book-cover-width-large:325px;
+    --book-cover-aspect-ration:0.75px;
+}
+
+.book-cover {
+    width: var(--book-cover-width);
+    height: var(--book-cover-width)/var(--book-cover-aspect-ration);
+}
+.book-cover-large{
+    --book-cover-width:var(--book-cover-width-large)
+}
+.book-grid {
+    display: grid;
+    justify-content: center;
+    grid-gap:2rem;
+    grid-template-columns:repeat(auto-fill,var(--book-cover-width));
+
+}
+.book-grid-large{
+    grid-template-columns:repeat(auto-fill,var(--book-cover-width-large));
+}
+.book-details {
+    display: flex;
+    color: white;
+}
+.book-details-label {
+    font-size: 1.2rem;
+    font-weight: 500;
+    align-self: flex-start;
+}
+.book-details-grid {
+    display: grid;
+    align-content: flex-start;
+    grid-gap:1 rem;
+    grid-template-columns: auto auto;
+}
+.book-details-btn-grid {
+    display: grid;
+    justify-items: flex-start;
+    align-items:flex-start;
+    align-content: flex-start;
+    grid-template-areas: 
+    "edit edit"
+    "author author";
+    grid-gap: .5rem;
+    margin-top: .5rem;
+}
+.book-details-author-button {
+    grid-area:author;
+    justify-self: stretch;
+}
+.filepond-prev {
+    border: 2px solid red;
+}

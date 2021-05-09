@@ -1,0 +1,9 @@
+.author-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1 rem;
+}
+ .author-name {
+     font-size: 1.5rem;
+     color: rgb(226, 196, 196);
+ }

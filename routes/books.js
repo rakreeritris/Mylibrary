@@ -49,8 +49,7 @@ router.post('/',async (req,res)=>{
    
    try {
        const newBook=await book.save()
-       res.redirect(`books/${newBook.id}`);
-       console.log(newBook)
+       res.redirect(`books/${newBook.id}`)
 
    } catch (error) {
        renderNewPage(res,book,true)
@@ -74,11 +73,9 @@ router.get('/:id',async(req,res)=>{
 router.get('/:id/edit',async (req,res)=>{
     try {
         const book=await Book.findById(req.params.id) 
-        renderEditPage(res,book);
-        console.log('This is book',book);   
+        renderEditPage(res,book) 
 
     } catch(err)  {
-        console.log(err);
         res.redirect('/');
     }
 })
@@ -101,7 +98,6 @@ router.put('/:id',async (req,res)=>{
        await book.save()
        res.redirect(`/books/${book.id}`);
     } catch(err) {
-        console.log(err)
         if(book != null)
         {
             renderEditPage(res,book,true)
@@ -154,7 +150,6 @@ async function renderformPage(res,book,form,hasError=false)
 {
     try {
         const authors= await Author.find({});
-        console.log(book)
         const params={
             authors:authors,
             book:book

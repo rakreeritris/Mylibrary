@@ -1,0 +1,36 @@
+.header-title{
+    color: wheat;
+    text-decoration: none;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+.header-nav ul {
+
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+}
+.header-nav li {
+    list-style: none;
+}
+.header-nav li a {
+    text-decoration: none;
+     color: wheat;
+     font-size: larger;
+     font-weight: 2.5rem;
+     padding: 1rem;
+}
+.header-nav li a:hover {
+    color: rgb(0, 0, 0);
+}
+.header-nav a:hover {
+    color: black;
+}

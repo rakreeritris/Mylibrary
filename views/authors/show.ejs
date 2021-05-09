@@ -1,12 +1,13 @@
 <h2><%= author.name %></h2>
-<a href="/authors/<%= author.id %>/edit">Edit</a>
+<div class="btn-row">
+<a class="btn btn-primary" href="/authors/<%= author.id %>/edit">Edit</a>
 <%- include('../partials/deleteForm',
             { url: `/authors/${author.id}` }) %>
+
+</div>
 <% if (booksByAuthor.length > 0) { %>
   <h2>Books By Author</h2>
-  <% booksByAuthor.forEach(book => { %>
-    <a href="/books/<%= book.id %>"></a>
-    <img height="150" width="100" src="<%= book.coverImagePath %>">
-    </a>
-  <% }) %>
+  <%- include('../partials/bookGrid',{
+    books:books,large:true
+  }) %>
 <% } %>

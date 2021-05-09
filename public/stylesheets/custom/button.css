@@ -1,0 +1,29 @@
+.btn{
+    border: 1px solid rgb(236, 209, 158);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+    font-family: 'Gothan Rounder';
+    cursor:pointer;
+    text-decoration: none;
+    text-align: center;
+}
+.btn-row{
+    display: flex;
+    align-items: flex-start;
+}
+.btn-row>* {
+    margin-left: 1rem;
+}
+.btn-row >*:first-child {
+    margin-left: 0;
+}
+.btn-primary {
+    color: black;
+    background:linear-gradient(to right,rgb(224, 157, 31),rgb(208, 255, 0));
+}
+.btn-danger {
+    color: black;
+    background: linear-gradient(to left,red,black);
+}

@@ -1,5 +1,4 @@
 const mongoose=require('mongoose');
-const book = require('./book');
 const Book=require('./book');
 const authorSchema=new mongoose.Schema({
     name:{
@@ -8,7 +7,8 @@ const authorSchema=new mongoose.Schema({
     }
 })
 authorSchema.pre('remove',function(next){
-  Book.find({author:this.id},(err,books)=>{
+  Book.find(
+      {author:this.id},(err,books)=>{
       if(err)
       {
           next(err)

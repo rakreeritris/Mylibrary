@@ -1,0 +1,33 @@
+@import'custom/header.css';
+@import'custom/button.css';
+@import'custom/form.css';
+@import'custom/book.css';
+@import'custom/author.css';
+:root {
+    font-family: 'Gothan Rounded';
+    font-size: 20px;
+    color:rgb(9, 34, 54);
+}
+body {
+ background:linear-gradient(to right,rgb(36, 11, 148),rgb(17, 103, 153));
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+.inner-container {
+    margin: 0 2rem;
+}
+.page-header{
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: wheat;
+}
+
+.page-header:hover {
+    color: black;
+}
